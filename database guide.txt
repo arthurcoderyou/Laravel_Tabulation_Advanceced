@@ -1,0 +1,74 @@
+User 
+  role => judge , contestant, admin
+
+
+Contest [table]
+  id
+  contest_name
+  announcement_date
+  show_contest_result - bool [override if the result must be given atm]
+  
+  Criteria [table]
+  id
+  contest_id
+  criteria_name
+  criteria_percent (must not exceed 100%)
+    CriteriaScoreRecord [table]
+    criteria_id
+    
+
+
+SubContest [table]  [ex. Best in Costume, Best in Talent]
+  id
+  contest_id
+  subcontest_name
+
+  SubContestCriteria [table] 
+  id
+  subcontest_id
+  criteria_name 
+  criteria_description
+  criteria_percent (must not exceed 100%)
+  
+
+
+
+Judge [Table] 
+  id
+  user_id
+  contest_id
+
+
+Contestant [Table]
+  id 
+  user_id
+  contest_id
+  contestant_number
+  contestant_message
+  contestant_representing
+
+
+
+Judgement [Table]
+  id
+  contest_id
+  jugde_id
+  contestant_id
+  contestant_score = [1 - 100]
+
+
+ContestAward
+  id
+  award_name
+  contest_id
+  contestant_id
+
+SubContestAward
+  id
+  sub_contest_id
+  sub_contest_award_name
+  contestant_id
+
+  
+
+  

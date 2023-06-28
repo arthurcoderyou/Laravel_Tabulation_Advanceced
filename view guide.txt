@@ -1,0 +1,23 @@
+Admin
+  Judges page
+  contestants page
+  contests page (contains the list of contest)
+  Update Account Page
+
+
+
+judge
+  contest page (dashboard)
+  voting page
+  view results page
+
+
+contestant 
+  contest page (dashboard) 
+  view results page
+
+
+user  
+  contest page (dashboard)
+  view results page
+  
